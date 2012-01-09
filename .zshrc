@@ -5,6 +5,7 @@ alias la='ls -A'
 alias history='history 1'
 alias h='history | sed "s/ *[0-9]* *//"'
 alias eman='erl -man'
+alias emake='erl -make'
 
 alias -g G='|grep'
 alias -g L='|less'
