@@ -4,6 +4,8 @@ alias ll='ls -l'
 alias la='ls -A'
 alias history='history 1'
 alias h='history | sed "s/ *[0-9]* *//"'
+alias eman='erl -man'
+
 alias -g G='|grep'
 alias -g L='|less'
 alias -g V='|vim -'
