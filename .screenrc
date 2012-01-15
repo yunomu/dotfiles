@@ -1,3 +1,13 @@
 escape "^__"
+zombie ^k^r
+
+startup_message off
+autodetach off
 
 bind w windowlist -b
+
+shelltitle "$ |zsh"
+hardstatus alwayslastline "%w"
+
+vbell on
+
