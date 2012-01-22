@@ -4,10 +4,14 @@ zombie ^k^r
 startup_message off
 autodetach off
 
-bind w windowlist -b
-
-shelltitle "$ |zsh"
 hardstatus alwayslastline "%w"
 
 vbell on
+
+bind w windowlist -b
+
+bind r eval 'command -c resize'
+bind -c resize ^] command
+bind -c resize j eval 'resize +1' 'command -c resize'
+bind -c resize k eval 'resize -1' 'command -c resize'
 

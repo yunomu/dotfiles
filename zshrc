@@ -30,3 +30,8 @@ PROMPT="%{[32m%}%n@%m %{[31m%}%~%{[m%}
 %# "
 
 export PATH=$PATH:/opt/local/bin:/opt/local/sbin
+
+# for screen
+preexec() {
+	test $STY && echo -ne "\ek${1%% *}\e\\"
+}
