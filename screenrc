@@ -8,6 +8,8 @@ hardstatus alwayslastline "%w"
 
 vbell on
 
+defscrollback 5000
+
 bind w windowlist -b
 
 bind r eval 'command -c resize'
