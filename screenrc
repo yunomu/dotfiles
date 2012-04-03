@@ -2,7 +2,6 @@ escape "^\\\"
 zombie ^k^r
 
 startup_message off
-autodetach off
 
 hardstatus alwayslastline "%w"
 
