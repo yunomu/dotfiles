@@ -29,6 +29,8 @@ bindkey '^N' history-beginning-search-forward
 PROMPT="%{[32m%}%n@%m %{[31m%}%~%{[m%}
 %# "
 
+export EDITOR=vi
+
 export PATH=$PATH:/opt/local/bin:/opt/local/sbin
 
 # for screen
