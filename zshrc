@@ -7,6 +7,7 @@ alias h='history | sed "s/ *[0-9]* *//"'
 alias screen="screen -D -RR"
 alias eman='erl -man'
 alias emake='erl -make'
+alias gco='git checkout'
 
 alias -g G='|grep'
 alias -g L='|less'
