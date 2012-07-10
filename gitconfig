@@ -1,0 +1,8 @@
+[user]
+	name = Yusuke Nomura
+	email = yunomu@gmail.com
+[alias]
+	co = checkout
+	ci = commit
+	st = status
+	br = branch
