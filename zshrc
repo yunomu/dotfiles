@@ -27,14 +27,19 @@ bindkey -e
 bindkey '^P' history-beginning-search-backward
 bindkey '^N' history-beginning-search-forward
 
-PROMPT="%{[32m%}%n@%m %{[31m%}%~%{[m%}
-%# "
-
 export EDITOR=vi
 
 export PATH=$PATH:/opt/local/bin:/opt/local/sbin
 
-# for screen
+# prompt
+PROMPT="%{[32m%}%n@%m %{[31m%}%~%{[m%}
+%# "
+
+autoload -Uz vcs_info
+zstyle ':vcs_info:*' formats '[%b]'
+
 preexec() {
 	test $STY && echo -ne "\ek${1%% *}\e\\"
+	vcs_info
+	RPROMPT="${vcs_info_msg_0_}"
 }
