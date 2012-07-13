@@ -4,10 +4,11 @@ alias ll='ls -l'
 alias la='ls -A'
 alias history='history 1'
 alias h='history | sed "s/ *[0-9]* *//"'
+
 alias screen="screen -D -RR"
+
 alias eman='erl -man'
 alias emake='erl -make'
-alias gco='git checkout'
 
 alias -g G='|grep'
 alias -g L='|less'
@@ -37,7 +38,6 @@ PROMPT="%{[32m%}%n@%m %{[31m%}%~%{[m%}
 
 autoload -Uz vcs_info
 zstyle ':vcs_info:*' formats '[%b]'
-
 preexec() {
 	test $STY && echo -ne "\ek${1%% *}\e\\"
 	vcs_info
