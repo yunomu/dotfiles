@@ -5,6 +5,8 @@ alias la='ls -A'
 alias history='history 1'
 alias h='history | sed "s/ *[0-9]* *//"'
 
+alias ghci='ghci -Wall -fno-warn-unused-do-bind'
+
 alias screen="screen -D -RR"
 
 alias eman='erl -man'
@@ -12,6 +14,7 @@ alias emake='erl -make'
 
 alias -g G='|grep'
 alias -g L='|less'
+alias -g L2='2>&1 |less'
 alias -g V='|vim -'
 
 export HISTFILE=$HOME/.zsh_history
