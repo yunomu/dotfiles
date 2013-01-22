@@ -6,3 +6,4 @@
 	ci = commit
 	st = status
 	br = branch
+	graph = log --graph --all
