@@ -1,5 +1,5 @@
 escape "^\\\"
-zombie ^k^r
+#zombie ^k^r
 
 startup_message off
 
