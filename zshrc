@@ -42,9 +42,9 @@ PROMPT="%{[32m%}%n@%m %{[31m%}%~%{[m%}
 autoload -Uz vcs_info
 zstyle ':vcs_info:*' formats '[%b]'
 setopt prompt_subst
-preexec() {
-	test $STY && echo -ne "\ek${1%% *}\e\\"
-}
+#preexec() {
+#	test $STY && echo -ne "\ek${1%% *}\e\\"
+#}
 precmd() {
 	vcs_info
 	RPROMPT="${vcs_info_msg_0_}"
