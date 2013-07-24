@@ -7,3 +7,5 @@
 	st = status
 	br = branch
 	graph = log --graph --all
+[core]
+	quotepath = false
