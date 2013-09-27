@@ -5,8 +5,6 @@ alias la='ls -A'
 alias history='history 1'
 alias h='history | sed "s/ *[0-9]* *//"'
 
-alias ghci='ghci -Wall -fno-warn-unused-do-bind'
-
 alias screen="screen -D -RR"
 alias emacs="emacs -nw"
 
