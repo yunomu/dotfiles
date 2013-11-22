@@ -9,3 +9,4 @@
 	graph = log --graph --all
 [core]
 	quotepath = false
+	excludesfile = ~/.gitignore
