@@ -10,6 +10,7 @@ alias emacs="emacs -nw"
 
 alias eman='erl -man'
 alias emake='erl -make'
+alias erl-dev='erl -pz ebin deps/*/ebin'
 
 alias -g G='|grep'
 alias -g L='|less'
