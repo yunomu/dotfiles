@@ -7,3 +7,8 @@
 [core]
 	quotepath = false
 	excludesfile = ~/.gitignore
+    pager = less -R
+[user]
+	name = Yusuke Nomura
+[color]
+	ui = true
