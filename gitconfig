@@ -4,7 +4,6 @@
 	st = status
 	br = branch
 	graph = log --graph --all
-	merge = merge --ff-only
 [core]
 	quotepath = false
 	excludesfile = ~/.gitignore
@@ -13,3 +12,5 @@
 	name = Yusuke Nomura
 [color]
 	ui = true
+[merge]
+	ff = only
