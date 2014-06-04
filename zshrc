@@ -1,9 +1,9 @@
-alias vi='vim'
 alias ls='ls -hF'
 alias ll='ls -l'
 alias la='ls -A'
 alias history='history 1'
 alias h='history | sed "s/ *[0-9]* *//"'
+alias view='vim -R'
 
 alias screen="screen -D -RR"
 alias emacs="emacs -nw"
