@@ -12,5 +12,3 @@
 	name = Yusuke Nomura
 [color]
 	ui = true
-[merge]
-	ff = only
