@@ -40,6 +40,11 @@ export PATH=$PATH:/opt/local/bin:/opt/local/sbin
 PROMPT="%{[32m%}%n@%m %{[31m%}%~%{[m%}
 %# "
 
+if [ "$TERM" = "screen" ]; then
+	PROMPT=$'\033k%c\033\134'$PROMPT
+#	PROMPT=$'\033k\033\134'$PROMPT
+fi
+
 ##
 ## VCS and RVM info in prompt.
 ##
