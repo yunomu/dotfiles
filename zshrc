@@ -16,6 +16,7 @@ alias -g G='|grep'
 alias -g L='|less'
 alias -g L2='2>&1 |less'
 alias -g V='|vim -'
+alias -g U='|nkf -w'
 
 export HISTFILE=$HOME/.zsh_history
 export HISTSIZE=10000
