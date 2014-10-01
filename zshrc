@@ -42,8 +42,9 @@ PROMPT="%{[32m%}%n@%m %{[31m%}%~%{[m%}
 
 if [ "$TERM" = "screen" ]; then
 	PROMPT=$'\033k%c\033\134'$PROMPT
-#	PROMPT=$'\033k\033\134'$PROMPT
 fi
+alias ssh="echo $'\033kssh\033\134'; ssh"
+alias mysql="echo $'\033kmysql\033\134'; mysql"
 
 ##
 ## VCS and RVM info in prompt.
