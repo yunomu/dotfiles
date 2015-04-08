@@ -8,6 +8,7 @@
 	quotepath = false
 	excludesfile = ~/.gitignore
     pager = less -R
+	editor = vim
 [user]
 	name = Yusuke Nomura
 [color]
