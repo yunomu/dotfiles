@@ -4,7 +4,8 @@ set tabstop=4
 set autoindent
 set cpoptions+=$
 set ruler
-set nohlsearch
+"set nohlsearch
+set hlsearch
 filetype on
 filetype plugin on
 "filetype indent on
@@ -17,3 +18,4 @@ inoremap <silent> <buffer> <C-w>l <Esc><C-w>l
 inoremap <silent> <buffer> <C-w>w <Esc><C-w>w
 
 au BufRead,BufNewFile *.hx set filetype=haxe
+au BufRead,BufNewFile *.scala set filetype=scala
