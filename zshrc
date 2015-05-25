@@ -4,6 +4,7 @@ alias la='ls -A'
 alias history='history 1'
 alias h='history | sed "s/ *[0-9]* *//"'
 alias view='vim -R'
+alias diff='diff -u'
 
 alias screen="screen -D -RR"
 alias emacs="emacs -nw"
