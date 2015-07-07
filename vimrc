@@ -8,7 +8,7 @@ set ruler
 set hlsearch
 filetype on
 filetype plugin on
-"filetype indent on
+filetype indent on
 syntax on
 
 inoremap <silent> <buffer> <C-w>j <Esc><C-w>j
