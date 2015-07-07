@@ -42,10 +42,8 @@ PROMPT="%{[32m%}%n@%m %{[31m%}%~%{[m%}
 %# "
 
 if [ "$TERM" = "screen" ]; then
-	PROMPT=$'\033k%c\033\134'$PROMPT
+    PROMPT=$'\033k%c\033\134'$PROMPT
 fi
-alias ssh="echo $'\033kssh\033\134'; ssh"
-alias mysql="echo $'\033kmysql\033\134'; mysql"
 
 ##
 ## VCS and RVM info in prompt.
@@ -77,10 +75,27 @@ autoload -Uz vcs_info
 zstyle ':vcs_info:*' formats '(%s%m)-[%b]' '%m'
 zstyle ':vcs_info:*' actionformats '(%s)-[%b|%a]'
 zstyle ':vcs_info:git+set-message:*' hooks check-git-repository-info
-precmd () {
+set_vcs_info() {
     psvar=()
     LANG=en_US.UTF-8 vcs_info
     [[ -n "$vcs_info_msg_1_" ]] && psvar[1]="$vcs_info_msg_1_"
     [[ -n "$vcs_info_msg_0_" ]] && psvar[2]="$vcs_info_msg_0_"
 }
+
+precmd() {
+    set_vcs_info
+}
 RPROMPT="%1(v|%F{red}%1v%f|)%2(v|%2v|)%3(v|%3v|)"
+
+COMMAND_LIST=(mysql sbt ssh)
+preexec() {
+    ecmd=`echo $1 | cut -d" " -f1`
+    for cmd in ${COMMAND_LIST[@]}; do
+        if [ "$ecmd" = "$cmd" ]; then
+            echo -n $'\033k'
+            echo -n $cmd
+            echo -n $'\033\134'
+            break
+        fi
+    done
+}
