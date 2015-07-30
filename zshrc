@@ -89,13 +89,15 @@ RPROMPT="%1(v|%F{red}%1v%f|)%2(v|%2v|)%3(v|%3v|)"
 
 COMMAND_LIST=(mysql sbt ssh)
 preexec() {
-    ecmd=`echo $1 | cut -d" " -f1`
-    for cmd in ${COMMAND_LIST[@]}; do
-        if [ "$ecmd" = "$cmd" ]; then
-            echo -n $'\033k'
-            echo -n $cmd
-            echo -n $'\033\134'
-            break
-        fi
-    done
+    if [ "$TERM" = "screen" ]; then
+        ecmd=`echo $1 | cut -d" " -f1`
+        for cmd in ${COMMAND_LIST[@]}; do
+            if [ "$ecmd" = "$cmd" ]; then
+                echo -n $'\033k'
+                echo -n $cmd
+                echo -n $'\033\134'
+                break
+            fi
+        done
+    fi
 }
