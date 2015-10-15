@@ -13,3 +13,5 @@
 	name = Yusuke Nomura
 [color]
 	ui = true
+[branch "master"]
+	mergeoptions = --no-ff
