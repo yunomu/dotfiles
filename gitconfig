@@ -14,4 +14,6 @@
 [color]
 	ui = true
 [branch "master"]
-	mergeoptions = --no-ff
+	mergeoptions = --ff
+[pull]
+	rebase = preserve
