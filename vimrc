@@ -17,7 +17,7 @@ inoremap <silent> <buffer> <C-w>h <Esc><C-w>h
 inoremap <silent> <buffer> <C-w>l <Esc><C-w>l
 inoremap <silent> <buffer> <C-w>w <Esc><C-w>w
 
-nmap <C-d> :noh<cr>
+nmap <C-d> :noh<cr>:<cr>
 
 au BufRead,BufNewFile *.hx set filetype=haxe
 au BufRead,BufNewFile *.scala set filetype=scala

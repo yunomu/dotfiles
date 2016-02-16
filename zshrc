@@ -87,7 +87,7 @@ precmd() {
 }
 RPROMPT="%1(v|%F{red}%1v%f|)%2(v|%2v|)%3(v|%3v|)"
 
-COMMAND_LIST=(mysql sbt ssh)
+COMMAND_LIST=(mysql sbt ssh dc redis-cli)
 preexec() {
     if [ "$TERM" = "screen" ]; then
         ecmd=`echo $1 | cut -d" " -f1`
