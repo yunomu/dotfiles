@@ -4,6 +4,7 @@
 	st = status
 	br = branch
 	graph = log --graph --all
+	stat = log --stat
 [core]
 	quotepath = false
 	excludesfile = ~/.gitignore
