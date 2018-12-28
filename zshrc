@@ -5,6 +5,7 @@ alias history='history 1'
 alias h='history | sed "s/ *[0-9]* *//"'
 alias view='vim -R'
 alias diff='diff -u'
+alias www='python -m SimpleHTTPServer 31011'
 
 alias screen="screen -D -RR"
 alias emacs="emacs -nw"
@@ -18,6 +19,7 @@ alias -g L='|less'
 alias -g L2='2>&1 |less'
 alias -g V='|vim -'
 alias -g U='|nkf -w'
+alias -g X='|xargs -IARG'
 
 export HISTFILE=$HOME/.zsh_history
 export HISTSIZE=10000
